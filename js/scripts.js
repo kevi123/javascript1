@@ -16,8 +16,14 @@ console.log(Array.isArray(myFavs), typeof myFavs);// type of says myFavs is an O
 
 myFavs.push("Logan");   //we are pushing item to the
 
-console.log(myFavs)
+console.log(myFavs);//display myfavs
 
 myFavs.unshift("Faith Herndon");   //unshift adds to the head
 
+console.log(myFavs); //
+
+myFavs.pop();  //this always pops the last item of the array.
 console.log(myFavs);
+
+myFavs.splice(2);   //cut everything after and including that index
+console.log("the splice\n", myFavs); // only thing left is [0,1]
