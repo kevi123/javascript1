@@ -25,5 +25,51 @@ console.log(myFavs); //
 myFavs.pop();  //this always pops the last item of the array.
 console.log(myFavs);
 
-myFavs.splice(2);   //cut everything after and including that index
-console.log("the splice\n", myFavs); // only thing left is [0,1]
+let removed = myFavs.splice(2);   //cut everything after and including that index also returns the values cut off
+//myFavs.splice(2,3) //this removes starting index 2 and remove 3 items
+console.log("the splice\n", myFavs, removed); // only thing left is [0,1]
+
+
+
+
+console.log(myFavs, "Before");
+myFavs.splice(3,1,["I got added!"]);  //splice starting and including at 3, remove 1qty and add last new paremeter in the middle
+console.log(myFavs, 'AFTER')    //show the myFaves array after we splice
+
+//
+console.log(myFavs, "before the slice")
+let copy = myFavs.slice(1); //slice copies the list starting at the indexed so[1,2.....]
+console.log(copy, myFavs)
+
+
+let removeIndex = myFavs.indexOf(42); //returns the index of item we are looking for
+console.log(removeIndex);
+myFavs.splice(removeIndex, 1)//we will remove only the first instance of the item we are looking for
+
+let myNums = [1,2,3,4,5]
+console.log(myNums.reverse());  //we are reversing the order of array myNums
+console.log(myNums);//
+
+
+//sorting
+console.log(myFavs)
+myFavs.sort();   //sorts the array in order, it only looks at the first character ie [ 2053, 42, "adfs"
+//console.log(myFavs)
+
+
+let multiDimensional = [["hello","0"],["goodbye","1"]];
+console.log(multiDimensional[0][0],multiDimensional[1][0]);
+
+let favoriteMovies = []
+let movie1 = ["Wolverine", "logan"]
+let movie2 = ["The Dark Knight", "batman"]
+let movie3 = ["Avengers", "Thor"]
+let movie4 = ["xmen", "magneto"]
+let movie5 = ["step brother", "Will Farrel"]
+
+favoriteMovies.push(movie1,movie2,movie3,movie4,movie5);
+console.log(favoriteMovies);
+
+let titles= [];
+titles.push(favoriteMovies[0][0],favoriteMovies[1][0],favoriteMovies[2][0],favoriteMovies[3][0],favoriteMovies[4][0]);
+console.log(titles)
