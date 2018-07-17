@@ -100,7 +100,27 @@ while (counter<10){
 
 
 //this loop displays everything in the array
+// const captains = ["kirk","Picard","Sisko","Janeway","Lorca"];
+// captains.forEach( (captain, num) => {
+  // console.log(captain, num);
+// });
+
+
+//this is a FOR OF loop..... this is only for arrays
 const captains = ["kirk","Picard","Sisko","Janeway","Lorca"];
-captains.forEach( (captain, num) => {
-  console.log(captain, num);
-});
+for (let captain of captains) {
+  console.log("Hello Captain $(captain)");
+}
+
+
+//create an object
+const me = {
+  firsName: "Kevin",
+  lastName: "Hinojosa",
+  age: 28
+};
+
+//this is a FOR IN loop....this is only for objects
+for(let property in me){
+  console.log(me[property]);
+}
