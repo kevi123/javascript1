@@ -1,3 +1,4 @@
+/*
 let myArray = [];         //created emty array
 let favoriteFoods=["pizza","hamburger","french fries"]   //array of 3 items indexed [0,1,2]
 let allTheThings=["string",23,["stuff"],{}, false];//think tuples
@@ -60,6 +61,8 @@ myFavs.sort();   //sorts the array in order, it only looks at the first characte
 let multiDimensional = [["hello","0"],["goodbye","1"]];
 console.log(multiDimensional[0][0],multiDimensional[1][0]);
 
+*/
+
 let favoriteMovies = []
 let movie1 = ["Wolverine", "logan"]
 let movie2 = ["The Dark Knight", "batman"]
@@ -70,6 +73,43 @@ let movie5 = ["step brother", "Will Farrel"]
 favoriteMovies.push(movie1,movie2,movie3,movie4,movie5);
 console.log(favoriteMovies);
 
-let titles= [];
-titles.push(favoriteMovies[0][0],favoriteMovies[1][0],favoriteMovies[2][0],favoriteMovies[3][0],favoriteMovies[4][0]);
-console.log(titles)
+// let titles= [];
+// titles.push(favoriteMovies[0][0],favoriteMovies[1][0],favoriteMovies[2][0],favoriteMovies[3][0],favoriteMovies[4][0]);
+// console.log(titles)
+
+let userMovie = prompt("What movie are you looking for?")
+console.log(userMovie)
+
+for(let index=0; index<favoriteMovies.length; index++){
+  console.log(index)
+  if (favoriteMovies[index][0]==userMovie){
+    alert("The movie was found", userMovie, "at index", index);
+  };
+};
+
+
+//define a function
+function uppercasify(string){
+  console.log(string);
+  return string.toUpperCase(); //data transformation
+};//end of the function
+
+//named functions
+//function definition
+function addTwo(num){
+  return num + 2;
+};
+
+//call the function
+console.log(addTwo(8));
+
+let myNewNumber = addTwo(34);
+
+//this function displays th estring via a console.log
+function logMyString(string){
+  string= uppercasify(string);
+  console.log(string);
+};
+
+
+logMyString("KEvin Was here");
