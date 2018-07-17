@@ -87,9 +87,9 @@ for(let index=0; index<favoriteMovies.length; index++){
   };
 };
 
-
+//Anonymous function
 //define a function
-function uppercasify(string){
+function (string){
   console.log(string);
   return string.toUpperCase(); //data transformation
 };//end of the function
@@ -113,3 +113,52 @@ function logMyString(string){
 
 
 logMyString("KEvin Was here");
+
+
+function alertsAd(){
+  alert("Hey we have a sale on everything in the stroe");
+}
+
+
+
+// let confirmStuff = function(someString){
+//   let newVariable;
+// }
+
+//confirmStuff("Do you want to watch frozen?")
+
+let i=0;
+function iCallMyself(){
+  console.log(i);
+  i++;
+  iCallMyself();
+}
+
+
+//Recursion
+let i =0;
+function iCallMyself(){
+  console.log(i)
+  i++;
+  if()
+}
+
+(logFunction, alertFunction) => //NO Functions
+  logFunction("hello World");
+  alertFunction('Goodbye,friends!');
+};
+
+
+//only 1 arguments
+string => {//parans are optionsal
+  console.log(string);
+}
+
+logstring("Hello cats")
+
+
+//Implicit returns
+string =>(string.toUpperCase());
+
+
+//Day5takehome convert years to dog years via functions.
