@@ -201,6 +201,6 @@ function lifeTimeSupplyCalculator(age, productAmount){
   let yearsValid=0;
   yearsValid= 80-age;
   lifeTimeSupply=yearsValid*productAmount;
-  alert("The lifetime supply for this user is "+ lifeTimeSupply + "!!")
+  alert("The lifetime supply for this user is "+ lifeTimeSupply + "pounds!!")
   return(lifeTimeSupply)
 }}
