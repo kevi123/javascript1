@@ -173,7 +173,7 @@ function dogYears(num){
     alert("EEROR: You cant be a negative age")
   }
   // else-if{ num<
-  // it needs to detect letters and chars here 
+  // it needs to detect letters and chars here
   else {
 
    let dogYears;
@@ -181,3 +181,26 @@ function dogYears(num){
    alert("The age in dog years is " + dogYears);
    return (dogYears);
  }}
+
+let userAge2=0;
+userAge2=prompt("Lets Calculate your lifetime supply, what is your age?");
+
+let amount=0;
+amount=prompt("What is the amount per year?")
+lifeTimeSupplyCalculator(userAge2, amount);
+
+function lifeTimeSupplyCalculator(age, productAmount){
+  if (age<0){
+    alert("EEROR: You cant be a negative age");
+  }
+  else if(80<age){
+    alert("ERROr : Sorry you are too old!")
+  }
+  else{
+// We need to check for chars
+  let yearsValid=0;
+  yearsValid= 80-age;
+  lifeTimeSupply=yearsValid*productAmount;
+  alert("The lifetime supply for this user is "+ lifeTimeSupply + "!!")
+  return(lifeTimeSupply)
+}}
