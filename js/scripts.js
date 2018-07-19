@@ -163,11 +163,15 @@
 //
 // //Day5takehome convert years to dog years via functions.
 //
-let userAge=0;
+
+
+let userAge=0;    //this variable is for the user input from prompt
 
 userAge=prompt("Please enter your age and press enter -->")
-dogYears(userAge)
+dogYears(userAge)   //Call the function
 
+
+//Function defined here, num is the age passed
 function dogYears(num){
   if (num<0){
     alert("EEROR: You cant be a negative age")
@@ -176,26 +180,30 @@ function dogYears(num){
   // it needs to detect letters and chars here
   else {
 
-   let dogYears;
+   let dogYears;    //this will hold value of calucated value to return.
    dogYears= num*7;
    alert("The age in dog years is " + dogYears);
    return (dogYears);
  }}
 
-let userAge2=0;
+let userAge2=0; //variable to hold age of user
 userAge2=prompt("Lets Calculate your lifetime supply, what is your age?");
 
-let amount=0;
+let amount=0; //variable will hold user input of amount per year
 amount=prompt("What is the amount per year?")
 lifeTimeSupplyCalculator(userAge2, amount);
 
+
+//this is the function for lifetimeSupply
 function lifeTimeSupplyCalculator(age, productAmount){
+  //Check for edge cases ie. negative age, alpha charactersS
   if (age<0){
     alert("EEROR: You cant be a negative age");
   }
   else if(80<age){
     alert("ERROr : Sorry you are too old!")
   }
+  //this is the safe case, 
   else{
 // We need to check for chars
   let yearsValid=0;
