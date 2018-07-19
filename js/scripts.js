@@ -47,10 +47,24 @@ Kevin Hinojosa Day 6 Notes
 
 
 //////////^^^^^^^^^^^^^^^^^^NOTES^^^^^^^^^^^^^
-let body;
-body = document.getElementsByTagName("body");  ///alays pass as a string so we dont pass an undeclared variable
+
+const body = document.getElementsByTagName("body");  ///alays pass as a string so we dont pass an undeclared variable
 console.log(body[0]);
 
-let header = document.getELementsByClassName("heading");
+// const header = document.getELementsByClassName("heading");
 
-const paragraph = document.getElementById("");
+
+//These are faster because it only searches for ID's
+const paragraph = document.getElementById("paragraph1");
+console.log("paragraph1");
+
+// let div = document.querySelector(".jr-is-the-best")
+// let div = document.querySelector("#beth_is_the_worst");
+
+// let divs = document.querySelectorAll(".jr-is-the-best");
+
+
+div.addEventListener("mouseover", ev => {
+  console.log(ev);
+  div.style.backgroundColor = "#e40007";}
+);
