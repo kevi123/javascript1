@@ -169,8 +169,15 @@ userAge=prompt("Please enter your age and press enter -->")
 dogYears(userAge)
 
 function dogYears(num){
+  if (num<0){
+    alert("EEROR: You cant be a negative age")
+  }
+  // else-if{ num<
+  // it needs to detect letters and chars here 
+  else {
+
    let dogYears;
    dogYears= num*7;
    alert("The age in dog years is " + dogYears);
    return (dogYears);
- }
+ }}
