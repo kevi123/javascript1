@@ -1,3 +1,26 @@
-div {
-min-height: 200px;
-};
+.white-text{
+  color: #FFF;
+}
+
+.blue-bg {
+  background-color: #0000FF ;
+}
+
+.green-bg {
+  background-color: #00FF00;
+}
+
+.purple-text{
+  color: #FF00FF;
+}
+
+.giant-text{
+  font-size: 32px;
+  font-weight: 900;
+}
+
+.image{
+  height: auto;
+  width: 100%;
+  display: block;
+}
