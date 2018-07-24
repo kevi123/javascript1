@@ -44,7 +44,7 @@ Kevin Hinojosa Day 6 Notes
 //   return(lifeTimeSupply)
 // }}
 
-
+/*
 
 //////////^^^^^^^^^^^^^^^^^^NOTES^^^^^^^^^^^^^
 
@@ -68,3 +68,50 @@ div.addEventListener("mouseover", ev => {
   console.log(ev);
   div.style.backgroundColor = "#e40007";}
 );
+
+
+
+/*
+Write a program that converts temperatures. It should:
+
+    1)Ask your user to give you a scale (Celcius or Fahrenheit) and the tempurature they want to convert. So if they give you 90 Fahrenheit,
+      they would want you to convert 90 degrees Fahrenheit to whatever that is in Celcius
+    2)Employ a function that accepts those two values as arguments: temperature and scale (either celcius or fahrenheit) and
+      converts the tempurature they gave you to the opposite scale.
+    3)Display the temperature in an h3 with minimal styling.
+    4)From that point on, when the user clicks on the h3, run the function to convert the temperature back and forth between Celcius and Fahrenheit.
+    5)Display the converted temperature in the h3 each time it is changed.
+
+*/
+
+//We are saving this to an H3
+const h3= document.querySelector('#temp');
+let scale = prompt("WHat scale (C or F) do you want to use?", "F or C");
+let temp = prompt("How hot is it?", "99");  //this creates a prompt and prefills it with 99
+
+
+function convertTemp(scale, temp){
+  scale= scale.toLowerCase();
+  let returnVal;
+  let oppositeVal = scale === 'c' ? "Fahrenheit" : "Celcius";
+  temp = parseInt(temp);
+  if(!isNaN(temp)){
+    returnVal = scale === 'c' ? (1.8 * temp) + 32: (5/9) *(temp -32);  //this is known as a ternary statement
+    //this is read as if (scale==c){ returnVal= (1.8* temp)+32}  else {returnval=(5/9)*(temp-32)};
+    h3.innerText = `Your temperature is ${returnVal} ${oppositeVal}`;// we need to use back ticks to use placeholder variables.
+  }else{
+    scale = prompt("WHat scale (C or F) do you want to use?", "F or C");
+    temp = prompt("How hot is it", "99");   //this prompt asks a question and prefills it with 99
+    convertTemp(scale, temp);   //recursion call itself again
+  }
+}
+
+convertTemp(scale,temp);
+
+
+h3.addEventListener('click',(e) =>{
+  let valueArray = e.target.innerText.split(' ');   //this splits innerText as an array [Your, temperature, is, returnVal, Calesius]
+    scale= valueArr[valueArr.length - 1 ]==="Celsius" ? "C": "F";
+    temp = valueArr[valueArr.length -2];
+    convertTemp(scale,temp)
+})
