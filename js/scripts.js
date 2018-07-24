@@ -63,7 +63,7 @@ console.log("paragraph1");
 
 // let divs = document.querySelectorAll(".jr-is-the-best");
 
-
+//we are listening for actions done by the mouse and keyboard
 div.addEventListener("mouseover", ev => {
   console.log(ev);
   div.style.backgroundColor = "#e40007";}
