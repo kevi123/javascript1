@@ -1,3 +1,7 @@
+<!-- //This goes over submit buttons over html  -->
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,19 +11,18 @@
   <title>Document</title>
 </head>
 <body>
-<div class="myDiv">
-  <p> ptag Lorem ipsum dolor sit amet. <span class="green-bg white-text"> This is the span</span></p>
-</div>
-<img src="https://massolutions.biz/wp-content/uploads/2014/12/e5a06942fa42823c88be5f3a834e063d-fantastic-art-bat-family.jpg" alt="this is the star wars pic" class="image">
 
 
 
+  <!-- get request is for front page ie. simple www.google.com and post expects some kind of parameter like www.google.com/gmail -->
+  <form action="http://www.ryeker.com" name="login" method="post"> <!--Action is where we want it to be sumbitted s URL-->
+    <input type="email" name="email" required minlength="5">  <!--Creates an input box of email, it checks that input has @-->
+    <input type="password" name="password" required maxlength="6"><!--password hides input as you text, "required" makes the user have to enter an input---><!--maxlength limits the number of chars -->
+    <button type="submit">Login!!</button>      <!--This is login button, sends it to get verified-->
 
-
-
-<script src="js/scripts.js"></script> <!-- This is how we link our javascript file-->
-
+  </form>
+  <script src="js/scripts.js"></script>
 </body>
-
-
 </html>
+
+<!--Takehome do day 7  -->
