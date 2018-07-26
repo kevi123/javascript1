@@ -1,3 +1,4 @@
+/*
 //Day 7 more Dom Stuff
 //In this code we are modifying html via javascript. we add remove change classes and content
 const div = document.querySelector(".myDiv");   //in the Html file, we find the first tag that has class myDiv...this is what querySelector does, we then grab all the text in it and its children and put it in variable div
@@ -59,3 +60,40 @@ span.addEventListener("click", (e) =>{//we are waiting for user to click on the 
 image.addEventListener('click', (e) =>{
   image.setAttribute("src", trekkies); // we are replacing the attribute of src to trekkies
 })
+
+
+*/
+
+/////////FizzBuzz/////////////////////////
+//My Try at
+
+/*
+for (let i = 1;i <= 100;i++){
+  if ((i%3===0)&&(i%5===0)){
+    console.log("fizzbuzz");
+  }else if (i%3===0){
+    console.log("fizz");
+  }else if(i%5===0){
+    console.log("buzz");
+  }
+  else console.log(i);
+};
+*/
+
+let body = document.querySelector("body"); //Search for the first tag that has <body> and insert it into variable body
+let script = document.querySelector("script"); //search for the first instance of script
+
+for (let i = 1;i <= 100;i++){
+  let newP = document.createElement('p')    //newP=<p></p>
+  if (( i%3=== 0)&&(i%5===0)){
+    newP.textContent = "fizzbuzz";          //<p>fizzbuzz</p>
+  }else if (i % 3 === 0){
+    newP.textContent = "fizz";              //<p>fizz</p>
+  }else if(i % 5 === 0){
+    newP.textContent = "buzz";              //<p>buzz</p>
+  }
+  else {
+    newP.textContent = i;             //prints current number
+}
+body.insertBefore(newP, script);
+};
