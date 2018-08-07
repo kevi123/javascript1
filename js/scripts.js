@@ -1,111 +1,64 @@
+//Day 11 JSOn.....API 
 /*
-day 10 Javascript
-Here we are working with timers
-/*
-fat arrow functions
+const weCool = true;
+const myPromise = new Promise( (resolve, reject) => {
+  if (weCool) resolve("We are in fact, cool")
+  else if (!weCool) reject ("sorry , No we aint cool");
+});
+
+
+myPromise.then(result =>{
+  console.log(result);
+}).catch( error =>{
+  console.log(error);
+});
+
+function returnTwo() {
+  return 2;
+}
+
+console.log(Promise.resolve(returnTwo()));
 */
 
-let clearBtn= document.querySelector("#clearBtn");
-/*let myTimeout;
-
-let annoyingPopup = () => {
-  alert("Hey!!! Have you seen my insane and wacky discounts!");
-  console.log("hey im in the timer, FIRST!!");
-};
-
-
-function startTimer() {
-  myTimeout = setTimeout(annoyingPopup, 5000);
-};
-
-
-//setTimeout take 2 arguements(action, milliseconds)
-// setTimeout(
-//   () => (annoyingPopup, 5000);
-// };
- startTimer();
-
-function cancelTimer() {
-  clearTimeout(myTimeout);
-};
-
-clearBtn.addEventListener("click", cancelTimer);
-*/
-/*
-let myInterval;
-
-function remindUser() {
-  alert("Hey balloons are on sale");
-};
-
-
-function clear() {
-  clearInterval(myInterval);
-};
-
-clearBtn.addEventListener("click", clear);
-*/
-
-/*let try it day 10
-*/
-
-//string.substring(start, end)
-
-/*
-
-clearIntervalBtn = document.querySelector("#clearIntervalBtn"); //searches html for this id
-clearTimeoutBtn = document.querySelector("#clearTimeoutBtn");
-
-let randomQuote= ["to be", "or not to be", "that is", "the question" ];
-
-let timeOutAnswer= prompt("How long in second would you like to wait");
-let intervalAnswer= prompt("How long intervals in seconds?")
-
-function createTimer(time, type){
-  endIndex = time.indexOf(" ");
-  let parsedTime = parsedInt(time.substring(0, endIndex));
-  if(!isNaN(parsedTime)){
-    parsedTime *=1000;
-    if(type === "timeout"){
-      timeOutReference = setTimeout(alertRandomQuote, parsedTime);
-    }
-  }else if(type==="interval"){
-    intervalReference= setInterval(alertRandomQuote, parsedTime);
-
-  }else{
-    //..
-    console.log("oh no!!");
+//with promises, use .then()
+fetch('http://stapi.co/api/v1/rest/series/search').then(response => {
+  console.log(response)
+  //if(response.status ===200){
+  if(response.ok){
+    console.log("Yes it works");
   }
+  return response.json();
+}).then(jsonResult =>{
+  console.log(jsonResult.series);
+  starTrekSeries = jsonResult.series;
+}).catch( (err) => {console.log(err); });
+
+
+
+
+
+/*
+let myObject = {
+  name: "Kevin",
+  age: NaN
 };
 
 
-function alertRandomQuote() {
-  let maxIndex = quotes.length - 1;
-    let indexToChoose = Math.floor(Math.random() * maxIndex); //Math.floor gets you the int value of a float // Math.random() generates a float value between 0-1;
-  alert(quotes[indexToChoose])
-}
+myObject = JSON.stringify(myObject);
 
-createTimer(timeOutAnswer, "timeout");
+console.log(myObject);
 
-createTimer(intervalAnswer, "interval")
-
-
-clearIntervalBtn.addEventListener("click", () => { clearInterval(intervalReference);});
-clearTimeoutBtn.addEventListener("click", () => { clearInterval(timeoutReference);});
-*/
-
-//local storage Session storage
-function storeUserInfo(){
-  if(!sessionStorage.getitem("firstName")){
-    let firstName = prompt("whats your name ");
-    sessionStorage.setItem("firstName", firstName);
+for(i=0; i<=5; i++){
+  j=0;
+  while(j=<5 and j>=0){
+  console.log(j)
+  j++
   }
-
+  console.log("nline")
 }
 
-storeUserInfo();
+//Promise
+const myPromise = new Promise((resolve, reject)=>{
 
-let retrievedValue=()//code goes here)
-
-alert('Hello ${retrievedValue}!');
-}
+})
+*/
